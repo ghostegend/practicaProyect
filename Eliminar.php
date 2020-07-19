@@ -76,14 +76,14 @@ if (isset($_GET['id'])) {
               
                 <div>
                       <div class="form-row">
-                    <div class="col-md-3 mb-5">
+                    <div class="col-md-3 mb-3">
                         <label for="id">ID</label>
                         <input type="text" class="form-control" id="validationTooltip03" name="id"value="<?php echo $obShipper->getID(); ?>">
                         <div class="invalid-tooltip">
                             Please provide a valid company.
                         </div>
                     </div>
-                 <div class="col-md-6 mb-5">
+                 <div class="col-md-6 mb-3">
                         
                         <label for="CompanyName">Company Name</label>
                         <input type="text" class="form-control" id="validationTooltip01" name="CompanyName"value="<?php echo $obShipper->getCompanyName(); ?>" required>
@@ -93,7 +93,7 @@ if (isset($_GET['id'])) {
                     </div>
                 </div>
                 <div class="form-row ">
-                    <div class="col-md-6 mb-5">
+                    <div class="col-md-6 mb-3">
                         
                         <label for="Phone">Phone</label>
                         <input type="text" class="form-control" id="validationTooltip01" name="Phone"value="<?php echo $obShipper->getPhone(); ?>" required>
@@ -110,10 +110,15 @@ if (isset($_GET['id'])) {
                 </div> 
             </form>
                 <!-- Fin Formulario para modificar al usuario -->
-                
-                <?php
-                    echo $mensaje;
+        <?php
+                if($mensaje){
+                   echo '<div class=" justify-content-center d-flex">
+                    <div class="alert alert-success col-md-6 mt-3" role="alert">
+                    '.$mensaje.'
+                   </div></div>';
+                }
                 ?>
+                
             </div>
         </main>
         <!-- Fin Contenido de la página -->

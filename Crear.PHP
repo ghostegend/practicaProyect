@@ -54,8 +54,12 @@
                     $obShipper = new Shipper();
                     $obShipper->setcompanyName ($_POST["CompanyName"]);
                     $obShipper->setphone ($_POST["Phone"]);
-                    $resultado= $obShipper->Insert();
-                    echo $resultado;
+                    $resultado= $obShipper->Insert(); 
+        
+                    echo '<div class=" justify-content-center d-flex">
+                    <div class="alert alert-success mt-3 col-md-6 mb-5" role="alert">
+                    '.$resultado.'
+                   </div> </div>';     
                 }
                 ?>
         </div>
